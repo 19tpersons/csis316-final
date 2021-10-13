@@ -96,6 +96,14 @@ int sys_hello(void) {
 	return 0;
 }
 
+//super hello implementation
+int sys_shello(void) {
+  char words[500];
+
+  cprintf(argstr(0, &words) + "\n");
+  return 0;
+}
+
 
 int sys_cps(void) {
   return cps();

@@ -25,6 +25,7 @@ int sleep(int);
 int uptime(void);
 int hello(void);
 int cps(void);
+int shello(void);
 
 // ulib.c
 int stat(const char*, struct stat*);
