@@ -91,9 +91,21 @@ sys_uptime(void)
 }
 
 //print hello
-int sys_hello(void) {
+int sys_greeting(void) {
 	cprintf("Hello World\n");
 	return 0;
+}
+
+//super hello implementation
+int sys_hello(void) {
+  char *words[500];
+
+  argstr(0, words);
+
+  cprintf(*words);
+  cprintf("\n");
+
+  return 0;
 }
 
 
