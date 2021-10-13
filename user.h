@@ -23,9 +23,9 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
-int hello(void);
+int greeting(void);
 int cps(void);
-int shello(char*);
+int hello(char*);
 
 // ulib.c
 int stat(const char*, struct stat*);
