@@ -98,9 +98,13 @@ int sys_hello(void) {
 
 //super hello implementation
 int sys_shello(void) {
-  char words[500];
+  char *words[500];
 
-  cprintf(argstr(0, &words) + "\n");
+  argstr(0, words);
+
+  cprintf(*words);
+  cprintf("\n");
+
   return 0;
 }
 

@@ -4,7 +4,9 @@
 
 int main(void) {
   for (int i = 0; i < 5; i++) {
-    hello("CSIS 430's Xv6 Lab Session");
-    hello("Calling hello() with arguments.\n");
+    shello("CSIS 430's Xv6 Lab Session");
+    shello("Calling hello() with arguments.\n");
   }
+
+  exit();
 }
