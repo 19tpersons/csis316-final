@@ -568,7 +568,7 @@ int chpr (int pid, int priority) {
     }
   }
 
-  relase(&ptable.lock);
+  release(&ptable.lock);
 
   return pid;
 }
