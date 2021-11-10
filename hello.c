@@ -3,11 +3,10 @@
 #include "user.h"
 
 int main(int argc, char *argv[]) {
-  if (argc == 0) {
-    hello("( null )");
+  if (argc == 1) {
+    hello("(null)");
   } else {
-    hello(argv[0]);
+    hello(argv[1]);
   }
-
-  return 0;
+  exit();
 }
