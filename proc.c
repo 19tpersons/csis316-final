@@ -343,13 +343,13 @@ scheduler(void)
       if(p->state != RUNNABLE)
         continue;
 
-      if (p->priority > highestProcess->priority) {
+      if (p->priority >= highestProcess->priority) {
         highestProcess = p;
       }
 
     }
 
-    if (p->priority > 0) {
+    if (highestProcess->state == RUNNABLE) {
       //Sets chosen process
       p = highestProcess;
 
