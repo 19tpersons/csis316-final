@@ -58,9 +58,9 @@ trap(struct trapframe *tf)
     break;
   case T_IRQ0 + IRQ_IDE:
     ideintr();
-    //pagefault(rcr2());
+    pagefault(rcr2());
     //lapiceoi();
-    cprintf("HERE");
+    //cprintf("HERE");
     lapiceoi();
     break;
   case T_IRQ0 + IRQ_IDE+1:
