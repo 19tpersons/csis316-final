@@ -282,10 +282,10 @@ void
 pagefault(uint address) {
      //Do some stuff
     //char *mem;
-    //uint a;
+    uint a;
     //struct proc *curproc = myproc();
 
-    //a = PGROUNDDOWN(address);
+    a = PGROUNDDOWN(address);
     //mem = kalloc();
 
     //if(mem == 0){
