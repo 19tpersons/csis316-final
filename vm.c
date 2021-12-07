@@ -292,9 +292,9 @@ pagefault(uint address) {
       cprintf("allocuvm out of memory\n");
       //deallocuvm(pgdir, newsz, oldsz);
       //return 0;
-    }
+    } 
     
-    memset(mem, 0, PGSIZE);
+    //memset(mem, 0, PGSIZE);
     //mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U);
     
     if(mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U) < 0){
