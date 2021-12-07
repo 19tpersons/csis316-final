@@ -295,7 +295,7 @@ pagefault(uint address) {
     } 
     
     memset(mem, 0, PGSIZE);
-    cprintf(a);
+    //cprintf(a);
     //mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U);
     
     //if(mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U) < 0){
