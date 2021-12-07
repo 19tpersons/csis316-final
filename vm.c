@@ -281,28 +281,28 @@ deallocuvm(pde_t *pgdir, uint oldsz, uint newsz)
 void 
 pagefault(uint address) {
      //Do some stuff
-    //char *mem;
+    char *mem;
     uint a;
-    //struct proc *curproc = myproc();
+    struct proc *curproc = myproc();
 
     a = PGROUNDDOWN(address);
-    //mem = kalloc();
+    mem = kalloc();
 
-    //if(mem == 0){
-      //cprintf("allocuvm out of memory\n");
+    if(mem == 0){
+      cprintf("allocuvm out of memory\n");
       //deallocuvm(pgdir, newsz, oldsz);
       //return 0;
-    //}
+    }
     
-   // memset(mem, 0, PGSIZE);
+    memset(mem, 0, PGSIZE);
     //mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U);
     
-    //if(mappages(pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U) < 0){
-    //  cprintf("allocuvm out of memory (2)\n");
+    if(mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U) < 0){
+      cprintf("allocuvm out of memory (2)\n");
       //deallocuvm(pgdir, newsz, oldsz);
-    //  kfree(mem);
+      kfree(mem);
     //  return 0;
-    //}
+    }
 }
 
 // Free a page table and all the physical memory pages
