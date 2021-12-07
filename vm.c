@@ -278,7 +278,7 @@ deallocuvm(pde_t *pgdir, uint oldsz, uint newsz)
   return newsz;
 }
 
-int pagefault(uint address) {
+void pagefault(uint address) {
      //Do some stuff
     char *mem;
     uint a;
