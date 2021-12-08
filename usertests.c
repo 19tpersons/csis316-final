@@ -1492,9 +1492,9 @@ sbrktest(void)
     printf(stdout, "sbrk downsize failed, a %x c %x\n", a, c);
     exit();
   }
- printf(1, "HERE\n\n\n");
+ 
   // can we read the kernel's memory?
-  for(a = (char*)(KERNBASE); a < (char*) (KERNBASE+2000000); a += 50000){
+  /*for(a = (char*)(KERNBASE); a < (char*) (KERNBASE+2000000); a += 50000){
     ppid = getpid();
     pid = fork();
     if(pid < 0){
@@ -1507,7 +1507,7 @@ sbrktest(void)
       exit();
     }
     wait();
-  }
+  }*/
 
   // if we run the system out of memory, does it clean up the last
   // failed allocation?
