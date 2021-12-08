@@ -280,7 +280,6 @@ deallocuvm(pde_t *pgdir, uint oldsz, uint newsz)
 
 void 
 pagefault(uint address) {
-     //Do some stuff
     char *mem;
     uint a;
     struct proc *curproc = myproc();
