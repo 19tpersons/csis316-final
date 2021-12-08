@@ -295,6 +295,7 @@ pagefault(uint address) {
     mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U);
 }
 
+
 // Free a page table and all the physical memory pages
 // in the user part.
 void
