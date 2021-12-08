@@ -289,20 +289,10 @@ pagefault(uint address) {
 
     if(mem == 0){
       cprintf("allocuvm out of memory\n");
-      //deallocuvm(pgdir, newsz, oldsz);
-      //return 0;
     } 
     
     memset(mem, 0, PGSIZE);
-    //cprintf(a);
     mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U);
-    
-    //if(mappages(curproc->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U) < 0){
-    //  cprintf("allocuvm out of memory (2)\n");
-      //deallocuvm(pgdir, newsz, oldsz);
-    //  kfree(mem);
-    //  return 0;
-    //}
 }
 
 // Free a page table and all the physical memory pages
