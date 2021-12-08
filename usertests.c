@@ -432,13 +432,13 @@ mem(void)
 
   printf(1, "mem test\n");
   ppid = getpid();
-  if((pid = fork()) == 0){
+  if((pid = fork()) == 0) {
     m1 = 0;
-    while((m2 = malloc(10001)) != 0){
+    while((m2 = malloc(10001)) != 0) {
       *(char**)m2 = m1;
       m1 = m2;
     }
-    while(m1){
+    while(m1) {
       m2 = *(char**)m1;
       free(m1);
       m1 = m2;
@@ -1515,7 +1515,7 @@ sbrktest(void)
     printf(1, "pipe() failed\n");
     exit();
   }
-  for(i = 0; i < sizeof(pids)/sizeof(pids[0]); i++){
+  for(i = 0; i < sizeof(pids)/sizeof(pids[0]); i++) {
     if((pids[i] = fork()) == 0){
       // allocate a lot of memory
       sbrk(BIG - (uint)sbrk(0));
@@ -1779,7 +1779,7 @@ main(int argc, char *argv[])
   exitiputtest();
   iputtest();
 
-  mem();
+  //mem();
   pipe1();
   preempt();
   exitwait();
