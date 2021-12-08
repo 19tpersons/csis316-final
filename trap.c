@@ -62,7 +62,7 @@ trap(struct trapframe *tf)
     ideintr();
     //lapiceoi();
     cprintf("HERE >>");
-    //cprintf(rcr2());
+    cprintf(tf->eip);
     lapiceoi();
     break;
   case T_IRQ0 + IRQ_IDE+1:
