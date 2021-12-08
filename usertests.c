@@ -1793,7 +1793,7 @@ main(int argc, char *argv[])
   dirfile();
   iref();
   forktest();
-  bigdir(); // slow
+  //bigdir(); // slow
 
   uio();
 
