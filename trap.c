@@ -83,7 +83,7 @@ trap(struct trapframe *tf)
     lapiceoi();
     break;
   case T_PGFLT:
-    //cprintf("here");
+    cprintf("here");
     pagefault(rcr2());
     lapiceoi();
     break;
