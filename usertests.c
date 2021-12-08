@@ -1508,7 +1508,7 @@ sbrktest(void)
     }
     wait();
   }
-
+  cprintf("HERE\n\n\n");
   // if we run the system out of memory, does it clean up the last
   // failed allocation?
   if(pipe(fds) != 0){
