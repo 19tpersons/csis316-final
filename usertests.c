@@ -1414,7 +1414,7 @@ forktest(void)
 void
 sbrktest(void)
 {
-  int fds[2], pid, pids[10], ppid;
+  int fds[2], pid, pids[10];
   char *a, *b, *c, *lastaddr, *oldbrk, *p, scratch;
   uint amt;
 
