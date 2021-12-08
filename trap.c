@@ -84,6 +84,8 @@ trap(struct trapframe *tf)
     break;
   case T_PGFLT:
     cprintf("here");
+    pagefault(rcr2());
+    lapiceoi();
     break;
   //PAGEBREAK: 13
   default:
