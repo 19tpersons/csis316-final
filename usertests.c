@@ -1492,7 +1492,7 @@ sbrktest(void)
     printf(stdout, "sbrk downsize failed, a %x c %x\n", a, c);
     exit();
   }
-
+ printf(1, "HERE\n\n\n");
   // can we read the kernel's memory?
   for(a = (char*)(KERNBASE); a < (char*) (KERNBASE+2000000); a += 50000){
     ppid = getpid();
@@ -1508,7 +1508,7 @@ sbrktest(void)
     }
     wait();
   }
-  printf(1, "HERE\n\n\n");
+
   // if we run the system out of memory, does it clean up the last
   // failed allocation?
   if(pipe(fds) != 0){
@@ -1756,7 +1756,7 @@ main(int argc, char *argv[])
   }
   close(open("usertests.ran", O_CREATE));
 
-  argptest();
+  /*argptest();
   createdelete();
   linkunlink();
   concreate();
@@ -1766,7 +1766,7 @@ main(int argc, char *argv[])
   bigargtest();
   bigwrite();
   bigargtest();
-  bsstest();
+  bsstest();*/
   sbrktest();
   validatetest();
 
